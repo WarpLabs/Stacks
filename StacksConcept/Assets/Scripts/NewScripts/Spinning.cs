@@ -10,15 +10,25 @@ public class Spinning : MonoBehaviour {
 
 	void Start () {
 
-		float lengthDifference = SpinSpeed /= SpinDirection.magnitude;
+		if (UseRandomDirection) {
 
-		int integerDiff = (int)(lengthDifference + 1f);
+			float x = Random.Range (0, 1f);
+			float y = Random.Range (0, 1f);
+			float z = Random.Range (0, 1f);
 
-		for (int i = 0; i < integerDiff; i++) {
-
-			PhysicsBody.AddForce (SpinDirection);
+			SpinDirection = new Vector3 (x, y, z);
 
 		}
+
+		for (int i = 0; i < SpinSpeed; i++) {
+
+			PhysicsBody.AddTorque(SpinDirection);
+
+		}
+
+		PhysicsBody.velocity = Vector3.ClampMagnitude (PhysicsBody.velocity, SpinSpeed);
+
+
 
 	}
 
