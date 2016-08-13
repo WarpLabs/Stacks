@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\NewScripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\NewScripts\HazardControl.cs" />
+     <Compile Include="Assets\Scripts\NewScripts\LandscaperControl.cs" />
      <Compile Include="Assets\Scripts\NewScripts\PillarControl.cs" />
      <Compile Include="Assets\Scripts\NewScripts\PlayerControl.cs" />
      <Compile Include="Assets\Scripts\NewScripts\PlayerMovement.cs" />
